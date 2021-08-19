@@ -1,5 +1,6 @@
 const { Sequelize } = require("sequelize");
 
+// Configuration de la base de donnée
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
@@ -10,6 +11,7 @@ const sequelize = new Sequelize(
   }
 );
 
+// Cette synthaxe nous permet a executer la migration des tables automatiquement vers la base de donnée
 sequelize.sync();
 
 (async () => {
