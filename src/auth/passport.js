@@ -19,6 +19,7 @@ passport.use(
 
     // Ici JwtPayload contient des données des requetes post et get 
     function (jwtPayload, done) {
+      console.log("payload ", jwtPayload);
       // Ici nous allons chercher dans la base de données la clé primaire du user
       return User.findOne({ where: { id: jwtPayload.id } })
         .then((user) => {

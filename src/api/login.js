@@ -25,7 +25,7 @@ router.post("/login", async (req, res) => {
       .json({ message: "Email or password does not match!" });
 
   // Si le password ne correspond pas
-  // compare function bcrypt
+
   const isPasswordValid = await compare(password, userWithEmail.password);
   if (!isPasswordValid)
     return res
