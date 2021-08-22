@@ -12,7 +12,7 @@ require("./models/user");
 const middlewares = require("./middlewares");
 
 // Importation des 3 routes Register Login et Payement
-const api = require("./api");
+const api = require("./routes/index");
 
 const app = express();
 app.use(express.json());

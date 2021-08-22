@@ -1,7 +1,7 @@
 const express = require("express");
-const registerApi = require("./register");
-const loginApi = require("./login");
-const paymentApi = require("./payment");
+const registerApi = require("../controllers/register");
+const loginApi = require("../controllers/login");
+const paymentApi = require("../controllers/payment");
 
 const router = express.Router();
 
