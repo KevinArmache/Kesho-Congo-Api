@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 });
 
 // Route principale pour l'execution des routes Register Payement et Login qui se trouve dans le fichier api
-app.use("/api/v1", api);
+app.use("/api", api);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
